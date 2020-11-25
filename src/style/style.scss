@@ -1,11 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 @import "variables";
 
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: $quicksand;
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 29, 29);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  &__el {
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.main {
+  &__heading {
+  }
+  &__h1 {
+  }
+}
+
+.btn {
 }
