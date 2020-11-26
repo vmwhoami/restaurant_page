@@ -24,6 +24,14 @@ class ElementCreator {
     return document.querySelector(`.${this.clss}`)
   }
 
+  addId(name) {
+    this.el.setAttribute("id", name)
+  }
+
+  getNodeById(id) {
+    document.querySelector(`#${id}`)
+  }
+
   addText() {
     if (this.options.length > 0) {
       let text = this.options[0]
@@ -35,14 +43,14 @@ class ElementCreator {
 let container = new ElementCreator('div', 'container', content).getNodeByClass()
 let background = new ElementCreator('div', 'background', container).getNodeByClass()
 let nav = new ElementCreator('nav', 'nav', container).getNodeByClass()
-let about = new ElementCreator('a', 'nav__el', nav, "about").getNodeByClass()
-let menu = new ElementCreator('a', 'nav__el', nav, "menu").getNodeByClass()
+let about = new ElementCreator('a', 'nav__el', nav, "about").addId("about")
+let menu = new ElementCreator('a', 'nav__el', nav, "menu").addId("menu")
 let logo = new ElementCreator('a', 'nav__logo', nav).getNodeByClass()
 let img = new ElementCreator('img', 'imglogo', logo).getNodeByClass()
 img.src = "../src/img/sushi_lounge_logo.png";
 img.alt = "logo";
-let contact = new ElementCreator('a', 'nav__el', nav, "contact").getNodeByClass()
-let booknow = new ElementCreator('a', 'nav__el', nav, "book now").getNodeByClass()
+let contact = new ElementCreator('a', 'nav__el', nav, "contact").addId("contact")
+let booknow = new ElementCreator('a', 'nav__el', nav, "book now").addId("booknow")
 let info = new ElementCreator('div', 'info', container).getNodeByClass()
 let main = new ElementCreator('div', 'main', info).getNodeByClass()
 let mainHeading = new ElementCreator('div', 'main__heading', main).getNodeByClass()
