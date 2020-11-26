@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
 @import "variables";
 
 * {
@@ -13,23 +13,46 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(29, 29, 29);
+  // background-color: #626a78;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/sushi-second.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  filter: blur(7px) brightness(0.4);
+  transform: scale(1.2);
 }
 
 .container {
-  width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
-  background-color: blanchedalmond;
 }
 .nav {
+  margin-top: 40px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+
   &__el {
+    color: white;
+    text-transform: uppercase;
+    font-family: $josefin;
+    cursor: pointer;
   }
 
   &__logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
   }
 }
 
