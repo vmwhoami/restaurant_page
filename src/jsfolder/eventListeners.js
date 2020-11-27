@@ -3,6 +3,8 @@ import { navbar } from "./nav";
 import { createMain } from './mainpage';
 import { createMenu } from './menupage';
 import { createContact } from './contactpage';
+import { createBooking } from './booknowpage';
+
 
 
 export function changePages() {
@@ -19,6 +21,8 @@ export function changePages() {
           createMenu()
         } else if (e.target.getAttribute('id') === 'contact') {
           createContact()
+        } else {
+          createBooking()
         }
       })
     }
