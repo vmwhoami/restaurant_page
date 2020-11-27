@@ -1,4 +1,4 @@
-import { ElementCreator, container } from './elementCreator';
+import { ElementCreator, container, cont } from './elementCreator';
 
 export let con = {}
 export function createMain() {

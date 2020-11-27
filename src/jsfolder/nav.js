@@ -1,4 +1,4 @@
-import { ElementCreator, content, container, background } from './elementCreator';
+import { ElementCreator, container } from './elementCreator';
 import { con } from './mainpage';
 
 
