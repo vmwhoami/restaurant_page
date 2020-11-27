@@ -4,14 +4,14 @@ export class ElementCreator {
     this.clss = clss;
     this.parent = parent;
     this.options = [...options];
-    this.el = this.create(this.elem);
+    this.el = this.create();
     this.addClass(this.el);
     this.addText();
     this.parent.appendChild(this.el);
   }
 
-  create(el) {
-    return document.createElement(el);
+  create() {
+    return document.createElement(this.elem);
   }
 
   addClass(el) {
