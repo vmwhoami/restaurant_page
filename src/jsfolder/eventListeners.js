@@ -1,10 +1,14 @@
 import { navbar } from './nav';
 import { createMain } from './mainpage';
-import { createMenu } from './menupage';
-import { createContact } from './contactpage';
+import createMenu from './menupage';
+import createContact from './contactpage';
 import createBooking from './booknowpage';
 
 export function changePages() {
+  function remove(elem) {
+    elem.parentNode.removeChild(elem);
+  }
+
   for (const key in navbar) {
     if (navbar.hasOwnProperty(key)) {
       const link = navbar[key];
@@ -23,9 +27,5 @@ export function changePages() {
         }
       });
     }
-  }
-
-  function remove(elem) {
-    elem.parentNode.removeChild(elem);
   }
 }

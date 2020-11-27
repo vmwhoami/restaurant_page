@@ -1,5 +1,4 @@
 import { ElementCreator, container } from './elementCreator';
-import { con } from './mainpage';
 
 export const navbar = {};
 export function createNav() {

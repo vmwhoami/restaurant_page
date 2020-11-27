@@ -1,6 +1,8 @@
 import { ElementCreator, container } from './elementCreator';
 
-export function createContact() {
+const contactBtn = {};
+
+export default function createContact() {
   const cont = new ElementCreator('div', 'cont', container).getNodeByClass();
   const formContainer = new ElementCreator('div', 'form', cont).getNodeByClass();
 
@@ -16,4 +18,9 @@ export function createContact() {
   const message = new ElementCreator('input', 'input__message', form).getNodeByClass();
   message.placeholder = 'Your message...';
   const btn = new ElementCreator('a', 'btn', form, 'send').getNodeByClass();
+
+  function sendToContactBtn() {
+    contactBtn.btn = btn;
+  }
+  sendToContactBtn();
 }

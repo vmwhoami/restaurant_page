@@ -1,4 +1,4 @@
-import { ElementCreator, container, cont } from './elementCreator';
+import { ElementCreator, container } from './elementCreator';
 
 export const con = {};
 export function createMain() {
@@ -16,6 +16,9 @@ export function createMain() {
 
   function sendInfo() {
     con.cont = cont;
+    con.promo = promo;
+    con.h1 = h1;
+    con.btn = btn;
   }
   sendInfo();
 }

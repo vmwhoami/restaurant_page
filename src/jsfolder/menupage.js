@@ -1,7 +1,6 @@
 import { ElementCreator, container } from './elementCreator';
-import { createMain, con } from './mainpage';
 
-export function createMenu() {
+export default function createMenu() {
   const cont = new ElementCreator('div', 'cont', container).getNodeByClass();
   const menu = new ElementCreator('div', 'menu', cont).getNodeByClass();
 
