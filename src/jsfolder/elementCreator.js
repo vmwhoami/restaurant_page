@@ -39,3 +39,5 @@ export class ElementCreator {
 }
 
 export const content = document.getElementById('content');
+export let container = new ElementCreator('div', 'container', content).getNodeByClass()
+export let background = new ElementCreator('div', 'background', container).getNodeByClass()
