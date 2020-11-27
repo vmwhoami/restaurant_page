@@ -25,9 +25,6 @@ export class ElementCreator {
     this.el.setAttribute("id", name)
   }
 
-  getNodeById(id) {
-    document.querySelector(`#${id}`)
-  }
 
   addText() {
     if (this.options.length > 0) {
@@ -35,6 +32,7 @@ export class ElementCreator {
       this.el.textContent = text
     }
   }
+
 
 }
 
