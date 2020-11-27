@@ -7,15 +7,11 @@ export function changePages() {
     if (navbar.hasOwnProperty(key)) {
       const link = navbar[key];
       link.addEventListener('click', e => {
-        if (e.target.getAttribute('id') === 'menu') {
+        con.cont.parentNode.removeChild(con.cont)
 
-          console.log('suck dick');
-
+        if (e.target.getAttribute('id') === 'home') {
+          createMain()
         }
-
-
-
-
       })
     }
   }

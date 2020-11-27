@@ -6,8 +6,8 @@ import { con } from './mainpage';
 export let navbar = {}
 export function createNav() {
   let nav = new ElementCreator('nav', 'nav', container).getNodeByClass();
-  let about = new ElementCreator('a', 'nav__el', nav, "about").addId("about");
-  about = document.getElementById("about");
+  let home = new ElementCreator('a', 'nav__el', nav, "home").addId("home");
+  home = document.getElementById("home");
   let menu = new ElementCreator('a', 'nav__el', nav, "menu").addId("menu");
   menu = document.getElementById("menu");
   let logo = new ElementCreator('a', 'nav__logo', nav).getNodeByClass();
@@ -18,9 +18,9 @@ export function createNav() {
   contact = document.getElementById("contact");
   let booknow = new ElementCreator('a', 'nav__el', nav, "book now").addId("booknow");
   booknow = document.getElementById("booknow");
-
+  booknow.classList.add('booknow')
   function navSetter() {
-    navbar.about = about;
+    navbar.home = home;
     navbar.menu = menu;
     navbar.contact = contact;
     navbar.booknow = booknow;
