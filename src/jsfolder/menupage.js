@@ -4,25 +4,38 @@ export default function createMenu() {
   const cont = new ElementCreator('div', 'cont', container).getNodeByClass();
   const menu = new ElementCreator('div', 'menu', cont).getNodeByClass();
 
+  const garbage = {};
   function menuCreate(num) {
     for (let i = 0; i < num; i += 1) {
-      new ElementCreator('div', 'menu__imgcont', menu);
+      const menuImgConts = new ElementCreator('div', 'menu__imgcont', menu);
+      garbage.menuImgConts = menuImgConts;
+      delete garbage.menuImgConts;
     }
   }
-
   menuCreate(4);
   const menuContainers = document.querySelectorAll('.menu__imgcont');
+
   menuContainers.forEach(elem => {
-    new ElementCreator('div', 'menu__info', elem);
+    const menuInfos = new ElementCreator('div', 'menu__info', elem);
+    garbage.menuInfos = menuInfos;
+    delete garbage.menuInfos;
   });
 
   const menuInfo = document.querySelectorAll('.menu__info');
 
   menuInfo.forEach(elem => {
-    new ElementCreator('h2', 'menu__h2', elem, 'This is going to');
-    new ElementCreator('span', 'menu__span', elem, '120$');
-    new ElementCreator('p', 'menu__p', elem, 'text goes here');
-    new ElementCreator('a', 'menu__btn', elem, 'order now');
+    const menuH2 = new ElementCreator('h2', 'menu__h2', elem, 'This is going to');
+    const menuSpan = new ElementCreator('span', 'menu__span', elem, '120$');
+    const menuP = new ElementCreator('p', 'menu__p', elem, 'text goes here');
+    const menuBtn = new ElementCreator('a', 'menu__btn', elem, 'order now');
+    garbage.menuH2 = menuH2;
+    garbage.menuSpan = menuSpan;
+    garbage.menuP = menuP;
+    garbage.menuBtn = menuBtn;
+    delete garbage.menuH2;
+    delete garbage.menuSpan;
+    delete garbage.menuP;
+    delete garbage.menuBtn;
   });
 
   const img1 = document.createElement('img');

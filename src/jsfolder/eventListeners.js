@@ -14,7 +14,6 @@ export default function changePages() {
     link.addEventListener('click', e => {
       const cont = document.querySelector('.cont');
       remove(cont);
-
       if (e.target.getAttribute('id') === 'home') {
         createMain();
       } else if (e.target.getAttribute('id') === 'menu') {
