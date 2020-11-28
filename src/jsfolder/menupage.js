@@ -1,17 +1,17 @@
 import { ElementCreator, container } from './elementCreator';
 
-export default function createMenu() {
+const createMenu = () => {
   const cont = new ElementCreator('div', 'cont', container).getNodeByClass();
   const menu = new ElementCreator('div', 'menu', cont).getNodeByClass();
 
   const garbage = {};
-  function menuCreate(num) {
+  const menuCreate = (num) => {
     for (let i = 0; i < num; i += 1) {
       const menuImgConts = new ElementCreator('div', 'menu__imgcont', menu);
       garbage.menuImgConts = menuImgConts;
       delete garbage.menuImgConts;
     }
-  }
+  };
   menuCreate(4);
   const menuContainers = document.querySelectorAll('.menu__imgcont');
 
@@ -56,4 +56,6 @@ export default function createMenu() {
   const img4 = document.createElement('img');
   img4.src = '../src/img/sushi.jpg';
   menuContainers[3].appendChild(img4);
-}
+};
+
+export default createMenu;

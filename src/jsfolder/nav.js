@@ -1,7 +1,7 @@
 import { ElementCreator, container } from './elementCreator';
 
 export const navbar = {};
-export function createNav() {
+export const createNav = () => {
   const nav = new ElementCreator('nav', 'nav', container).getNodeByClass();
   let home = new ElementCreator('a', 'nav__el', nav, 'home').addId('home');
   home = document.getElementById('home');
@@ -16,11 +16,11 @@ export function createNav() {
   let booknow = new ElementCreator('a', 'nav__el', nav, 'book now').addId('booknow');
   booknow = document.getElementById('booknow');
   booknow.classList.add('booknow');
-  function navSetter() {
+  const navSetter = () => {
     navbar.home = home;
     navbar.menu = menu;
     navbar.contact = contact;
     navbar.booknow = booknow;
-  }
+  };
   navSetter();
-}
+};

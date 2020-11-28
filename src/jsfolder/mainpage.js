@@ -14,11 +14,11 @@ export function createMain() {
   leftimage.src = '../src/img/sushi.jpg';
   leftimage.alt = 'sushi plate';
 
-  function sendInfo() {
+  const sendInfo = () => {
     con.cont = cont;
     con.promo = promo;
     con.h1 = h1;
     con.btn = btn;
-  }
+  };
   sendInfo();
 }

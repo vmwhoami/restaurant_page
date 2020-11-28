@@ -4,10 +4,10 @@ import createMenu from './menupage';
 import createContact from './contactpage';
 import createBooking from './booknowpage';
 
-export default function changePages() {
-  function remove(elem) {
+const changePages = () => {
+  const remove = (elem) => {
     elem.parentNode.removeChild(elem);
-  }
+  };
 
   Object.keys(navbar).forEach(key => {
     const link = navbar[key];
@@ -25,4 +25,6 @@ export default function changePages() {
       }
     });
   });
-}
+};
+
+export default changePages;
