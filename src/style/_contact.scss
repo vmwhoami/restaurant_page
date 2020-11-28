@@ -2,12 +2,14 @@
   width: 50%;
   background-color: white;
   align-self: center;
+
   &__form {
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 40px 60px;
+
     input {
       padding: 20px 30px;
       border: none;
