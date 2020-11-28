@@ -1,5 +1,166 @@
-@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&display=swap");
+@import "variables", "menu", "contact";
 
-body {
-  background-color: $red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/sushi_main.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  z-index: -20;
+  filter: blur(7px) brightness(0.4);
+  transform: scale(1.1);
+}
+
+.container {
+  flex: 0 1 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__el {
+    color: white;
+    text-transform: uppercase;
+    font-family: $josefin;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+
+    &::after {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: $myred;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    &:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &__logo {
+    width: 100px;
+    height: 70px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.nav__el.booknow {
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.cont {
+  flex: 1 1 70vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main {
+  flex: 0 1 60vw;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+  z-index: 200;
+
+  &__promo {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: white;
+    text-transform: uppercase;
+    font-family: $quicksand;
+    margin-bottom: 20px;
+  }
+
+  &__heading {
+    flex: 0 1 500px;
+  }
+
+  &__h1 {
+    font-family: $quicksand;
+    color: white;
+    font-weight: 300;
+    line-height: 50px;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
+.btn {
+  font-family: $quicksand;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  background-color: $myred;
+  transition: all 0.3s ease 0s, left 0.3s ease 0s;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
+.side {
+  flex: 0 1 60vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &__imgcontainer {
+    width: 45vw;
+    height: 70vh;
+    margin-left: -100px;
+    z-index: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
 }
