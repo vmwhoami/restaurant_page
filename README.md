@@ -1,6 +1,5 @@
 # Restaurant Page
-
-In this project, I built a Simple Restuarant Page App using webpack to practice DOM manipulation by dynamically rendering its various pages: Home, Menu, and Contact.
+In this project, I built a Simple Restuarant Page App using plain Javascript compiled in with webpack to practice DOM manipulation by dynamically rendering its various pages: Home, Menu, and Contact.
 
 ![screenshot](./src/img/suhilounge.gif)
 
